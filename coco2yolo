@@ -1,0 +1,21 @@
+import os
+from ultralytics.data.converter import convert_coco
+
+# 1. Define where the data was unzipped
+# Update these if your folders are named differently after unzipping
+dataset_root = "data/datasets/seadronessee"
+coco_annotations_dir = os.path.join(dataset_root, "annotations")
+yolo_output_dir = os.path.join(dataset_root, "yolo_format")
+
+# 2. Run the conversion
+# This looks for all .json files in the annotations dir
+print("Starting COCO to YOLO conversion...")
+convert_coco(
+    labels_dir=coco_annotations_dir,
+    save_dir=yolo_output_dir,
+    use_segments=False,  # Set to True if doing segmentation
+    use_keypoints=False,
+    cls91to80=False      # SDS has its own classes, don't use COCO 91-to-80 map
+)
+
+print(f"Done! YOLO-ready data is at: {yolo_output_dir}")
