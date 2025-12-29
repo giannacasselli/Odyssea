@@ -1,0 +1,31 @@
+# --- DATA & MODELS (Managed by DVC) ---
+data/
+datasets/
+*.zip
+*.tar.gz
+*.tar
+
+# --- YOLO/Ultralytics Outputs ---
+runs/
+*.pt
+*.onnx
+*.tflite
+*.engine
+
+# --- Python & Environments ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+odyssea_env/
+.env
+
+# --- SHARCNET / HPC Specific ---
+*.out
+*.err
+slurm-*.out
+
+# --- System & IDE ---
+.DS_Store
+.vscode/
+.idea/
