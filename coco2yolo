@@ -3,7 +3,7 @@ from ultralytics.data.converter import convert_coco
 
 # 1. Define where the data was unzipped
 # Update these if your folders are named differently after unzipping
-dataset_root = "data/datasets/seadronessee"
+dataset_root = "data/datasets/seadronessee/Compressed Version"
 coco_annotations_dir = os.path.join(dataset_root, "annotations")
 yolo_output_dir = os.path.join(dataset_root, "yolo_format")
 
