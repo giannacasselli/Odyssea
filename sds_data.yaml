@@ -1,0 +1,12 @@
+# Path to the data we are generating
+path: /global/scratch/gcassell/odyssea/Odyssea/data/datasets/seadronessee/yolo_format
+train: images/train  # relative to path
+val: images/val      # relative to path
+
+# Class Names (Update these based on the SeaDronesSee categories)
+names:
+  0: swimmer
+  1: boat
+  2: lifejacket
+  3: buoy
+  4: surfboard
